@@ -1,0 +1,247 @@
+:root{
+    --primary: #eb0a8d;
+    --primaryshadow: #8f0555;
+    --secundary: #f8af04;
+    --secundaryshadow: #c57a00;
+    --white: #fff;
+    --black: #000;
+    --mainFont: 'Akaya Telivigala', cursive;
+    
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+.header{
+    display: flex;
+    align-items: center;
+}
+/* Globals */
+
+body{
+    background-color: var(--primary);
+    font-size: 1.6rem;
+    line-height: 1.5;
+
+}
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 85%;
+    height: 65%;
+    margin: 1rem 0;
+
+
+}
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+
+}
+h1, h2, h3{
+    text-align: center;
+    color: var(--secundary);
+    font-family: var(--mainFont);
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.2rem;
+}
+h3{
+    font-size: 2.4rem;
+}
+/* header*/
+
+.header{
+    display: flex;
+    justify-content: center;
+
+}
+.header__logo{
+    margin: 3rem 0;
+}
+/*footer */
+.footer{
+    background-color: var(--primaryshadow);
+    padding: 1rem 0;
+    margin-top: 7rem;
+}
+.footer__text{
+    font-family: var(--mainFont);
+    text-align: center;
+    font-size: 2.2rem;
+}
+/* Navegation */
+.navegation{
+    background-color: var(--primaryshadow);
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    /* gap: 2rem; * Separacion forma nueva */
+
+}
+.navegation__link{
+    font-family: var(--mainFont);
+    color: var(--white);
+    font-size: 3rem;
+    margin-right: 2rem; /* forma vieja */
+
+}
+.navegation__link:last-of-type{
+    margin-right: 0;
+}
+.navegation__link--active,
+.navegation__link:hover{
+    color: var(--secundary);
+}
+/* Grid */
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+@media (min-width: 768px){
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* Productos */
+
+.product{
+    background-color: var(--primaryshadow);
+    padding: 1rem;
+}
+
+
+.product__name{
+    font-size: 4rem;
+}
+.product__price{
+    font-size: 2.8rem;
+    color: var(--secundary)
+}
+.product__name,
+.product__price{
+    font-family: var(--mainFont);
+    margin: 1 rem 0;
+    text-align: center;
+}
+
+/* graphics*/
+
+.graphic{
+    min-height: 25rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.graphic--cake{
+    grid-row: 2 / 4 ;
+    grid-column:
+     1 / 3;
+     background-image: url(../img/WhatsApp\ Image\ 2021-03-03\ at\ 10.39.38\ PM.jpeg);
+}
+.graphic--node{
+    background-image: url(../img/grafico2.jpg);
+    grid-column: 1/3;
+    grid-row: 8 / 9;
+}
+@media (min-width: 768px) {
+    .graphic--node{
+        grid-row: 5 / 6;
+        grid-column: 2 /4;
+    }    
+}
+/* nosotros */
+.nosotros{
+    display:grid;
+    grid-template-rows: repeat(2,auto);
+}
+@media (min-width: 768px) {
+    .nosotros{
+        
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+
+@media (min-width: 768px)  {
+    .nosotros__img{
+        grid-column: 2/3;
+    }
+}
+/* blocks */
+
+.blocks{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .blocks{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+.block{
+    text-align: center;
+
+}
+
+.block__title{
+    margin: 0;
+}
+/* Pagina del producto */
+@media (min-width: 768px) {
+    .cake{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        
+    }
+}
+.form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+
+}
+.form__camp{
+    border-color: var(--primaryshadow);
+    border-width: 1rem;
+    border-style: solid;
+    background-color: transparent;
+    color: var(--white);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+
+}
+.form__submit{
+    background-color: var(--secundary);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--mainFont);
+    padding: 2rem;
+    transition: background-color .3s ease;
+    grid-column: 1/3;
+}
+.form__submit.form__submit:hover{
+    cursor: pointer;
+    background-color: var(--secundaryshadow);
+}
